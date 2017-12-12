@@ -20,7 +20,7 @@ $min = "0"
 $max = ""
 $znamienko = ""
 
-$Form = GUICreate("Sčítavanie a odčítavanie do", 493, 222, -1, -1)
+$Form = GUICreate("Sčítavanie a odčítavanie", 493, 222, -1, -1)
    $labelNadpis = GUICtrlCreateLabel("Sčítavanie a odčítavanie do", 75, 16, 285, 30)
    GUICtrlSetFont(-1, 14, 800, 0, "Verdana")
    $comboMax = GUICtrlCreateCombo("", 365, 15, 50, 25, $CBS_DROPDOWNLIST)
