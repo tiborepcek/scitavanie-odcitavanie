@@ -4,7 +4,7 @@ Autor: Tibor Repček
 
 Web: https://tiborepcek.com/scitavanie-odcitavanie/
 
-![Sčítavanie a odčítavanie](https://i1.wp.com/tiborepcek.com/wp-content/uploads/scitavanie_odcitavanie_1.1.jpg "Sčítavanie a odčítavanie")
+![Sčítavanie a odčítavanie](https://i1.wp.com/tiborepcek.com/wp-content/uploads/scitavanie_odcitavanie_1.1-new.jpg "Sčítavanie a odčítavanie")
 
 Sčítavanie a odčítavanie 1.0 je programček, ktorý náhodne vyberá príklady na sčítavanie a odčítavanie s výsledkom do 10. Vy zadáte výsledok, program ho skontroluje a ak je správny, priráta zelený bod. Nesprávny výsledok je ohodnotený červeným bodom. Ak necháte príklad vypočítať za vás počítač, priráta sa modrý bod.
 
