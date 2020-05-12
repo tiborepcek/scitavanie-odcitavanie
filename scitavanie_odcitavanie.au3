@@ -1,12 +1,18 @@
 #cs
-Sčítavanie a odčítavanie 1.1 napísaná v AutoIt 3
+Sčítavanie a odčítavanie 1.2 napísané v AutoIt 3
 Autor: Tibor Repček
-Web: http://tiborepcek.com/scitavanie-odcitavanie/
+Web: https://tiborepcek.com/scitavanie-odcitavanie/
 #ce
 
 
 #NoTrayIcon
 Opt("GUICloseOnESC", 0)
+
+#pragma compile(ProductName, Sčítavanie a odčítavanie)
+#pragma compile(ProductVersion, 1.2)
+#pragma compile(FileVersion, 1.2.0.0)
+#pragma compile(CompanyName, 'tiborepcek.com')
+#pragma compile(FileDescription, Automatické príklady na sčítavanie a odčítavanie s prednastaveným najväčším možným výsledkom. Viac na https://tiborepcek.com/scitavanie-odcitavanie/)
 
 #include <ButtonConstants.au3>
 #include <ComboConstants.au3>
@@ -24,9 +30,9 @@ $Form = GUICreate("Sčítavanie a odčítavanie", 493, 222, -1, -1)
    $labelNadpis = GUICtrlCreateLabel("Sčítavanie a odčítavanie do", 75, 16, 285, 30)
    GUICtrlSetFont(-1, 14, 800, 0, "Verdana")
    $comboMax = GUICtrlCreateCombo("", 365, 15, 50, 25, $CBS_DROPDOWNLIST)
-   GUICtrlSetData(-1, "10|20", "10")
+   GUICtrlSetData(-1, "10|20|30|40|50|60|70|80|90|100", "10")
    $max = GUICtrlRead($comboMax)
-   $labelPodnadpis = GUICtrlCreateLabel("verzia: 1.1, autor: Tibor Repček (tiborepcek.com)", 15, 43, 460, 22, BitOR($SS_CENTER,$WS_GROUP))
+   $labelPodnadpis = GUICtrlCreateLabel("verzia: 1.2, autor: Tibor Repček (tiborepcek.com)", 15, 43, 460, 22, BitOR($SS_CENTER,$WS_GROUP))
    GUICtrlSetFont(-1, 10, 400, 0, "Verdana")
    $labelCisloVlavo = GUICtrlCreateLabel("", 43, 110, 35, 22, BitOR($SS_CENTER,$WS_GROUP))
    GUICtrlSetFont(-1, 12, 800, 0, "Verdana")
@@ -113,13 +119,13 @@ While 1
 		Case $btnNovyPriklad
 			novyPriklad($min, $max)
 	EndSwitch
-	
+
 	If GUICtrlRead($comboMax) <> $max And _GUICtrlComboBox_GetDroppedState($comboMax) = False Then
 		$numberMax = GUICtrlRead($comboMax)
 		$max = $numberMax
 		novyPriklad($min, $max)
 	EndIf
-	
+
 	If _GUICtrlComboBox_GetDroppedState($comboMax) Then $max = ""
 WEnd
 
